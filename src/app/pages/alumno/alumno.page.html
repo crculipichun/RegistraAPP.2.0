@@ -1,0 +1,19 @@
+<ion-header>
+  <app-encabezado></app-encabezado>
+  
+</ion-header>
+
+<ion-content class= "body" [fullscreen]="true">
+
+
+  <div id=intro>
+    <strong>Bienvenido !</strong>
+    <p>Registra tu asistencia mediante el codigo QR que te proporcionara el docente.</p>
+  </div>
+
+  <div id=banner>
+    <strong>Asistencia!:</strong>
+    <ion-button expand="block" color="success" (click)="showMyToast()"><ion-icon name="qr-code-outline" slot="end"></ion-icon>Abrir Escáner QR</ion-button>
+  </div>
+  
+</ion-content>

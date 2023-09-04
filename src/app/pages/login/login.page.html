@@ -1,0 +1,35 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="body">
+  <ion-card>
+    <ion-card-header>
+      <ion-title>Iniciar Sesión</ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form (ngSubmit)="ingresar()">
+        <ion-item lines="full">
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="user.usuario" name="usuario" required></ion-input>
+        </ion-item>
+        
+        <ion-item lines="full">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="user.password" name="password" required></ion-input>
+        </ion-item>
+      <div *ngIf="passwordTooShort && user.password.length < 8" class="error-message">
+  La contraseña es muy corta. Debe tener al menos 8 caracteres.
+</div>
+        <ion-button expand="full" [disabled]="!user.usuario || !user.password" (click)="ingresar()">Ingresar</ion-button>
+        <ion-router-link routerLink="/forgot" class="forgot-password">
+          ¿Olvidaste tu contraseña?
+        </ion-router-link>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+           

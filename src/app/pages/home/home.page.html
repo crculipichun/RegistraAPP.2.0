@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <app-encabezado></app-encabezado>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">RegistrApp</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+  <div id=intro>
+    <strong>Bienvenid@!</strong>
+    <p>Desde esta aplicación podrás escanear un Código QR provisto por tu docente para registrar tu asistencia a clases!</p>
+    
+    <p>Si eres docente, podrás generar un Código QR vinculado a la clase actual para que tus alumnos puedan escanearlo y registrar su asistencia.</p>
+  </div>
+
+  <div id=banner>
+    <strong>Comenzamos?:</strong>
+    <ion-button routerLink="/login" routerDirection="forward" expand="block" color="tertiary">Iniciar sesión</ion-button>
+
+    
+  </div>
+</ion-content>
+
