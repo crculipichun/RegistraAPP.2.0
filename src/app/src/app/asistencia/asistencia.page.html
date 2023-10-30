@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="registroA">
+    <h1>Clases Registradas</h1>
+  </div>
+
+  <div class="registroA">
+    <ion-list lines="none">
+      <ion-item *ngFor="let materia of asistencias" class="asistencia-item">
+        {{ materia.nombre }}
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="boton-asistencia">
+    <ion-button routerLink="/home" fill="clear" color="primary">
+      <p>Volver</p>
+    </ion-button>
+    <ion-button (click)="cerrarSesion()" fill="clear" color="danger">
+      <p>Cerrar Sesión</p>
+    </ion-button>
+  </div>
+</ion-footer>

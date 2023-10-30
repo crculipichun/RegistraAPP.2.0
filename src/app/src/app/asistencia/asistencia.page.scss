@@ -1,0 +1,54 @@
+.registration-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .registration-container h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .asistencia-item {
+    background-color: #13121200;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 16px;
+  }
+  
+  .boton-asistencia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  ion-button {
+    width: 48%;
+    font-weight: bold;
+  }
+  
+  ion-button[fill="clear"] {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  
+  ion-button[color="primary"] {
+    background-color: #007bff;
+    color: #000000;
+  }
+  
+  ion-button[color="primary"]:hover {
+    background-color: #0056b3;
+  }
+  
+  ion-button[color="danger"] {
+    background-color: #dc3545;
+    color: #000000;
+  }
+  p{
+    color: #000000;
+  }
+  ion-button[color="danger"]:hover {
+    background-color: #bb2b3b;
+  }
