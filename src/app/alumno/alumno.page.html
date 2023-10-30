@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+      <ion-title>
+        RegistrApp
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="body" [fullscreen]="true">
+    <div id="intro">
+      <strong>Bienvenido!</strong>
+      <p>Registra tu asistencia mediante el código QR que te proporcionará el docente.</p>
+    </div>
+
+    <div id="contenido" *ngIf="showContent" style="display: none;">
+      <button (click)="startScanner()">
+        <ion-icon name="qr-code-outline"></ion-icon> Escanear QR
+      </button>
+    </div>
+
+    <zxing-scanner #scanner (scanSuccess)="handleQrCodeResult($event)"></zxing-scanner>
+
+    <select #deviceSelect (change)="onDeviceSelectChange(deviceSelect.value)">
+      <option *ngFor="let device of availableDevices" [value]="device.deviceId">
+        {{ device.label }}
+      </option>
+    </select>
+
+    <div *ngIf="selectedDevice">
+      <p>Dispositivo seleccionado: {{ selectedDevice.label }}</p>
+    </div>
+    
+  </ion-content>
+
+  
+    
+</ion-content>

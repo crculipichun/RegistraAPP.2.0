@@ -1,0 +1,43 @@
+
+#intro {
+    text-align: center;
+    margin-top: 15%;
+  }
+
+#banner {
+  text-align: center;
+  margin-top: 10%;
+}
+#body{
+  color: aqua;
+}
+.boton-qr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+ion-button {
+  width: 48%;
+  font-weight: bold;
+}
+
+ion-button[fill="clear"] {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+ion-button[color="primary"] {
+  background-color: #007bff;
+  color: #000000;
+}
+
+ion-button[color="primary"]:hover {
+  background-color: #0056b3;
+}
+
+
+p{
+  color: #000000;
+}

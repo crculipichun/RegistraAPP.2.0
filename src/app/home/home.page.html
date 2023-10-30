@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>RegistraAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="welcome-container">
+    <img src="assets\Logo.png" class="app-logo" alt="Logo de la aplicación">
+    <ion-card class="welcome-card">
+      <ion-card-header>
+        <ion-card-title class="welcome-title">¡Bienvenido a nuestra aplicación!</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p class="welcome-message">Explora las características emocionantes de nuestra aplicación.</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-button expand="full" (click)="qr()" fill="outline">Ir a QR</ion-button>
+  <ion-button expand="full" (click)="AsistenciaPage()" fill="outline">Ir a Asistencia</ion-button>
+  <ion-button expand="full" (click)="PerfilPage()" fill="outline">Ir a Perfil</ion-button>
+</ion-content>
