@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" color="medium"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-avatar style="margin: 0 auto;" class="item-avatar">
+    <img alt="logo" src="../../assets/img/Logo.png" />
+  </ion-avatar>
+
+  <ion-card>
+    <ion-card-header color="primary">
+      <ion-card-title class="ion-text-center">Log In</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div>
+        <ion-button expand="full" shape="round" (click)="goTologinDocente()" color="success">
+          <ion-icon slot="start" name="person"></ion-icon>
+          Eres Docente?
+        </ion-button>
+        <p>O</p>
+        <ion-button expand="full" shape="round" (click)="goTologinAlumno()" color="success">
+          <ion-icon slot="start" name="person"></ion-icon>
+          Eres Alumno?
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <div></div>
+
+</ion-content>

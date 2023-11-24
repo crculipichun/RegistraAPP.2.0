@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title size="large">Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" color="light">
+  <ion-card>
+    <ion-card-header color="primary">
+      <ion-card-title class="ion-text-center">Registrarme</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="ion-padding">
+      <ion-item color="light">
+        <ion-label position="floating" color="dark" >Nombre</ion-label>
+        <ion-input   [(ngModel)]="userRegisterModal.nombre" required></ion-input>
+      </ion-item>
+
+      <ion-item color="light">
+        <ion-label position="floating" color="dark" >Apellido</ion-label>
+        <ion-input  [(ngModel)]="userRegisterModal.apellido" required></ion-input>
+      </ion-item>
+
+      <ion-item color="light">
+        <ion-label position="floating" color="dark">Correo</ion-label>
+        <ion-input  [(ngModel)]="userRegisterModal.correo" type="email" required></ion-input>
+      </ion-item>
+
+      <ion-item color="light">
+        <ion-label position="floating" color="dark">Contraseña</ion-label>
+        <ion-input   [(ngModel)]="userRegisterModal.password" type="password" required></ion-input>
+      </ion-item>
+
+      <div class="ion-text-center ion-padding-top">
+        <ion-button expand="full" color="success" (click)="registerUser()">Registrar</ion-button>
+      </div>
+
+      <div class="ion-text-center ion-padding-top">
+        <ion-button expand="full" color="medium" (click)="goToLogin()">Cancelar</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

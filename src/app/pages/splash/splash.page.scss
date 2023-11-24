@@ -1,0 +1,35 @@
+.splash-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/img/fondo_app.png");
+    background-size: 100% auto; /* Ajusta verticalmente */
+    background-position: center; /* Ajusta la posición de la imagen */
+    height: 100vh; /* 100% de la altura de la ventana */
+    animation: fadeIn 3s ease; /* Animación de entrada de 3 segundos */
+  }
+  
+  .item-avatar  {     
+    width: 150% !important;  
+    height : 150% !important;  
+    max-width: 150px !important;  //any size
+    max-height: 150px !important; //any size 
+}
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px); /* Altura del rebote */
+    }
+  }

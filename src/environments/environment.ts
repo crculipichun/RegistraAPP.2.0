@@ -4,10 +4,9 @@
 
 export const environment = {
   production: false,
-  
-  supabaseKey:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp5eGZyc2NwcXZpc3Vic29mbHlsIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTgxMDMyNjMsImV4cCI6MjAxMzY3OTI2M30.QzkoVqITCKW7meTrpZV3N1afr_L8EfmEWzEb-joBIuk', // Reemplaza con tu clave de acceso de Supabase
-  };
-
+  supabaseUrl:'https://frrwaoacgpogsszqpyxc.supabase.co',
+  supabaseKey:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZycndhb2FjZ3BvZ3NzenFweXhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTcyODIzMTYsImV4cCI6MjAxMjg1ODMxNn0.nuP5eBF5vJFZfIS6e_rD7PVNuFiSREDD2vgqnYyKZ8U',
+};
 
 /*
  * For easier debugging in development mode, you can import the following file

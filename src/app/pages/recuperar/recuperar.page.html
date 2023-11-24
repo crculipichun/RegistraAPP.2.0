@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      RegistrApp
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<h1>Recuperar Contraseña</h1>
+
+
+<ion-content>
+  <form action="">
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="String" [(ngModel)]="correo" name="correo" required></ion-input>
+    </ion-item>
+    <div class="button-container">
+      <ion-button class="side-button" (click)="Login()">Recuperar</ion-button>
+    </div>
+  </form>
+</ion-content>
+

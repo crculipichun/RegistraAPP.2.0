@@ -1,0 +1,43 @@
+<ion-header [translucent]="false">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="true"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">RegistraAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Menu Principal</ion-card-title>
+      <div *ngIf="user">
+        <p>Bienvenido {{ user.nombre }}</p>
+      </div>
+      
+    </ion-card-header>
+
+    <ion-card-content class="ion-text-center">
+      <ion-button expand="full" shape="round" (click)="goToProfile()" color="success">
+        <ion-icon slot="start" name="person"></ion-icon>
+        Ir al perfil
+      </ion-button>
+
+      <ion-button expand="full" shape="round" (click)="goToQr()" color="success">
+        <ion-icon slot="start" name="person"></ion-icon>
+        Crear Qr
+      </ion-button>
+
+
+      <ng-container *ngIf="userInfo$ | async as user">
+        <ion-button expand="full" shape="round" (click)="logout()" color="danger" class="ion-margin-top">
+          <ion-icon slot="start" name="log-out"></ion-icon>
+          Cerrar sesión
+        </ion-button>
+      </ng-container>
+    </ion-card-content>
+  </ion-card>
+
+  
+</ion-content>

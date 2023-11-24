@@ -1,0 +1,34 @@
+ion-label {
+    color: #000000; /* Cambia el color de la etiqueta */
+    font-size: 1.2em; /* Cambia el tamaño de la fuente de la etiqueta */
+  }
+  
+  ion-input {
+    border: 2px solid #000000; /* Agrega un borde a la entrada */
+    border-radius: 5px; /* Agrega esquinas redondeadas a la entrada */
+  }
+  .ion-header-bg {
+    --background: linear-gradient(to right, #ff9a9e, #fecfef);
+  }
+  .ion-content {
+    --background: #000000; /* Color de fondo */
+  }
+  .ion-icon-label {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ion-icon {
+    margin-right: 8px;
+    font-size: 1.5em;
+    color: #4285f4;
+  }
+  .btn-style {
+    --background: #4285f4; /* Cambia el color de fondo del botón */
+    --border-radius: 8px; /* Agrega esquinas redondeadas al botón */
+  }
+  .profile-input{
+    color: black;
+    background-color: white;
+  }
+  

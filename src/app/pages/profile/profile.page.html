@@ -1,0 +1,40 @@
+<ion-header [translucent]="true" class="ion-header-bg">
+  <ion-toolbar>
+    <ion-title>Perfil de usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding ion-content-bg">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div *ngIf="userInfo$ | async as user">
+    <ion-list>
+      <ion-item>
+  <ion-label position="stacked" class="ion-icon-label">
+    <ion-icon name="person" class="ion-icon"></ion-icon> Nombre
+  </ion-label>
+  <ion-input class="profile-input" [(ngModel)]="user.nombre" aria-labelledby="" disabled></ion-input>
+</ion-item>
+
+      <ion-item>
+          <ion-label position="stacked">Apellido</ion-label>
+          <ion-input class="profile-input" [(ngModel)]="user.apellido" aria-labelledby="" disabled></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label position="stacked" >correo</ion-label>
+          <ion-input class="profile-input" [(ngModel)]="user.correo" aria-labelledby="" disabled></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button (click)="navigateToUserTypeMenu()" color="primary" class="ion-margin-top btn-style">
+  Volver al menú
+</ion-button>
+  </div>
+  
+
+</ion-content>

@@ -11,15 +11,15 @@ import { firstValueFrom, lastValueFrom } from 'rxjs';
 import { Preferences } from '@capacitor/preferences';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-loginDocente',
+  templateUrl: './loginDocente.page.html',
+  styleUrls: ['./loginDocente.page.scss'],
   standalone: true,
   imports: [IonicModule, CommonModule, RouterLinkWithHref, FormsModule, HttpClientModule, NgFor, NgForOf],
   providers: [UserService]
 })
 
-export class LoginPage implements OnInit { //OnDestroy
+export class LoginDocentePage implements OnInit { //OnDestroy
 
   userLoginModal: IUserLogin = {
     correo: '',
@@ -49,13 +49,16 @@ export class LoginPage implements OnInit { //OnDestroy
   
       if (user_id) {
         console.log("Usuario existe...");
+        if ( this.userLoginModal.correo.toLowerCase().endsWith('@profesor.duoc.cl'))
+          console.log("Usuario es de tipo docente...");
   
+       
         await Preferences.set({ key: 'userId', value: user_id.toString() });
   
-        this.route.navigate(['/user-type-menu'], { state: { userInfo: user_id }});
+        this.route.navigate(['/user-type-menu-Docente'], { state: { userInfo: user_id }});
       } else {
-
-        console.log("Usuario no existe...");
+        console.error('Usuario no existe o Correo no válido para docente');
+        
       }
     } catch (error) {
       console.error("Hubo un error durante el inicio de sesión:", error);
@@ -66,14 +69,11 @@ export class LoginPage implements OnInit { //OnDestroy
     this.userLoginModal.correo = '';
     this.userLoginModal.password = '';
   }
-
-  goToRegister(): void {
-    this.route.navigate(['/register']); 
-  }
-
   recuperar(){
     this.route.navigate(['/recuperar'])
 
   }
+
+  
 }
 

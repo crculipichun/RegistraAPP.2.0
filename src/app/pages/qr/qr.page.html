@@ -1,0 +1,47 @@
+<ion-header>    
+    <ion-title>QR</ion-title>
+</ion-header>
+
+<ion-content>
+  <ion-card class="ion-text-center">
+     <ion-card-content>
+
+       <ion-item>
+         <ion-label position="fixed">Nombre: </ion-label>
+         <ion-input type="text" [(ngModel)]="usuario.nom" required></ion-input>
+       </ion-item>
+
+       <ion-item>
+        <ion-label position="fixed">Seccion: </ion-label>
+        <ion-input type="text" [(ngModel)]="usuario.sec" required></ion-input>
+       </ion-item>
+
+       <ion-item>
+        <ion-label position="fixed">Fecha: </ion-label>
+        <ion-input type="date" [(ngModel)]="usuario.fec" required></ion-input>
+       </ion-item>
+
+       <ion-button 
+           expand="block" 
+           class="ion-margin" 
+           (click)="generaScan()" color="dark">
+           Generate QR Code  
+       </ion-button>
+
+       <qrcode [qrdata]="qrCodeString" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+
+
+     </ion-card-content>
+  </ion-card>
+
+  <ion-button 
+     expand="block" 
+     class="ion-margin" 
+     (click)="verScan()" color="dark">
+         Ver QR Code  
+   </ion-button>
+
+   <ion-item>
+     <ion-label class="ion-text-wrap">escaneo {{scannedResult}}</ion-label>
+   </ion-item>
+</ion-content>
